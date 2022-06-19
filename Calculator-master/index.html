@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to left,#20bcd1,#e92ffa);
+}
+        td button{
+            padding: 10px;
+        }
+        .cal{
+            border: 1px solid rgba(255, 255, 255, .75);
+            margin: 5% auto;
+            width:40%;
+            text-align: center;   
+            border-color: rgba(255, 255, 255, .75);
+            border-width: 20px;
+         
+            }
+        input{
+            margin: 20px 0;
+            height: 60px;
+            background-color:rgba(255, 255, 255, .75);
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+            border-color: rgba(255, 255, 255, .75);
+            border-width: 2px;
+        }
+        input:hover{
+            color: rgba(255, 255, 255, .75);
+            /* background: linear-gradient(to left,#e92ffa,#20bcd1); */
+            transition: .3s;
+        }
+        button{
+            background-color:rgba(255, 255, 255, .75);
+            color: black;
+            font-weight: 800;
+            border-color: rgba(255, 255, 255, .75);
+            width: 60px;
+        }
+        button:hover{
+                background-color: black;
+                color: rgba(255, 255, 255, .75);
+                transition: .3s;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin:50px 0; color:#ffff ;font-size:45px"> Calculator App</h1>
+
+    <div class="cal">
+            <table >
+                    <tr>
+                        <td ><input type="text" value="" id="input"  size=31></td>
+                    </tr>
+                </table>
+                <table cellpadding = 20>
+                <tr>
+                    <td> <button  id="btn"  onclick="val('9')">9</button></td>
+                    <td><button  id="btn"   onclick="val('8')">8</button></td>
+                    <td ><button  id="btn"   onclick="val('7')" >7</button></td>
+                    <td><button   onclick="val('*')">*</button></td>
+                    <td><button    onclick="ans()">Ans</button></td>
+                    <td><button    onclick="oN()">ON</button></td>
+
+                </tr>
+                <tr>
+                     <td><button    id="btn"   onclick="val('6')">6</button></td>
+                     <td><button    id="btn"    onclick="val('5')">5</button></td>
+                     <td> <button   id="btn"    onclick="val('4')">4</button></td>
+                     <td><button    onclick="val('-')">-</button></td>
+                     <td><button   onclick= "sqrt('√')"><i class="fas fa-square-root-alt"></i></button></td>
+                   
+                     <td><button    onclick="off()">OFF</button></td>
+
+                    </tr>
+                <tr>
+                    <td> <button  id="btn"  onclick="val('3')">3</button></td>
+                     <td><button  id="btn" onclick="val('2')">2</button></td>
+                     <td> <button id="btn"   onclick="val('1')">1</button></td>
+                     <td><button  onclick="val('+')">+</button></td>
+                     <td><button  onclick="pow('x²')">x²</button></td>
+                     <td><button  onclick= "getPi()">π</button></td>
+
+                    </tr> 
+                <tr>
+                    <td> <button  id="btn"  onclick="val('0')">0</button></td>
+                     <td><button  id="btn" onclick="val('00')">00</button></td>
+                     <td> <button  onclick="getResult()">=</button></td>
+                     <td><button   onclick="val('%')">%</button></td>
+                     <td><button   onclick="getClear()">clr</button></td>
+                     <td> <button  onclick= "backspace('x')"><i class =  "fa fa-window-close"></i></button></td>
+
+                </tr> 
+                  
+                 
+                
+            </table>             
+        </div>    
+
+<script src="./app.js"></script>
+
+
+
+
+
+    </body>
+</html>
